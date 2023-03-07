@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prof Submitted Grades</title>
+    <title>Students in the Section</title>
     <link rel="icon" type="image/x-icon" href="/asset/chcc-vector-logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -373,11 +373,10 @@
           </div>
 
           <a
-            href="grades.html"
+            href="subject-and-section.html"
             class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
+            >Subject & Section</a
           >
-            Grades
-          </a>
 
           <div class="flex items-center gap-5">
             <img
@@ -408,10 +407,18 @@
             <h1
               class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
             >
-              Mariel, Joe Mariel M.
+              Computer Science-1A
             </h1>
 
-            <p class="mb-5 text-gray-500">1st Sem S.Y 2022 - 2023</p>
+            <div class="flex items-center justify-between w-full">
+              <p class="text-gray-500">1st Sem S.Y 2022 - 2023</p>
+
+              <button
+                class="bg-blu w-[140px] text-white h-[40px] rounded-lg hover:opacity-70"
+              >
+                Add new
+              </button>
+            </div>
 
             <input
               class="py-3 w-[100%] border-2 border-blu text-sm md:text-base lg:text-lg font-medium rounded-lg text-left px-10"
@@ -429,38 +436,30 @@
               >
                 <tr>
                   <th class="pt-8 pb-8">No.</th>
-                  <th class="pt-8 pb-8">Code</th>
-                  <th class="pt-8 pb-8">Subject</th>
-                  <th class="pt-8 pb-8">Year & Section</th>
-                  <th class="pt-8 pb-8">Status</th>
+                  <th class="pt-8 pb-8">Last name</th>
+                  <th class="pt-8 pb-8">Fist name</th>
+                  <th class="pt-8 pb-8">M.I</th>
+                  <th class="pt-8 pb-8">Action</th>
                 </tr>
               </thead>
 
               <tbody
                 class="space-y-6 text-center font-regular text-sm md:text-base lg:text-lg font-medium"
               >
-                <tr class="space-y-5">
-                  <td class="pb-4 pt-2">1</td>
-                  <td class="pb-4 pt-2">GEC 103</td>
-                  <td class="pb-4 pt-2">Mathematics</td>
-                  <td class="pb-4 pt-2">BSCS 4A</td>
-                  <td class="pb-4 pt-2 text-green-400">Posted</td>
-                  <td class="pb-4 pt-2">
-                    <a class="text-blu" href="view-prof-submitted-grades.html"
-                      >view</a
+                <tr class="space-y-5r">
+                  <td class="pb-4 pt-4">1</td>
+                  <td class="pb-4 pt-4">Magsilang</td>
+                  <td class="pb-4 pt-4">Dan</td>
+                  <td class="pb-4 pt-4">T</td>
+                  <td class="pb-4 pt-4">
+                    <a class="text-blu underline mr-2 hover:opacity-70" href="#"
+                      >edit</a
                     >
-                  </td>
-                </tr>
 
-                <tr class="space-y-5">
-                  <td class="pb-4 pt-2">1</td>
-                  <td class="pb-4 pt-2">GEC 103</td>
-                  <td class="pb-4 pt-2">Mathematics</td>
-                  <td class="pb-4 pt-2">BSCS 4A</td>
-                  <td class="pb-4 pt-2 text-red-400">Unposted</td>
-                  <td class="pb-4 pt-2">
-                    <a class="text-blu" href="view-prof-submitted-grades.html"
-                      >view</a
+                    <a
+                      class="text-red-400 underline ml-2 hover:opacity-70"
+                      href="#"
+                      >delete</a
                     >
                   </td>
                 </tr>

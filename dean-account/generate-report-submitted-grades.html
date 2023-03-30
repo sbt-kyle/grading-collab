@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student List</title>
+    <title>Report of Submitted Grades</title>
     <link rel="icon" type="image/x-icon" href="/asset/chcc-vector-logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -374,13 +374,20 @@
         <!-- right-content -->
         <main class="max-w-[1920px]">
           <div
-            class="flex flex-col justify-between items-center w-[100%] my-5 gap-3 xl:items-start"
+            class="flex flex-col justify-between items-center w-[100%] my-5 gap-3 md:items-start"
           >
             <h1
               class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
             >
-              Student List
+              Submitted Grades
             </h1>
+
+            <h1
+              class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
+            >
+              Professor1
+            </h1>
+            <p class="text-grayish">professor1@example.com</p>
 
             <input
               class="py-3 w-[100%] border-2 border-blu text-sm md:text-base lg:text-lg font-medium rounded-lg text-left px-10"
@@ -398,11 +405,13 @@
               >
                 <tr>
                   <th class="pt-8 pb-8">No.</th>
-                  <th class="pt-8 pb-8">Last name</th>
-                  <th class="pt-8 pb-8">First name</th>
-                  <th class="pt-8 pb-8">M.I</th>
-                  <th class="pt-8 pb-8">Department</th>
-                  <th class="pt-8 pb-8">Year & Section</th>
+                  <th class="pt-8 pb-8">Code</th>
+                  <th class="pt-8 pb-8">Subject</th>
+                  <th class="pt-8 pb-8">Year&Section</th>
+                  <th class="pt-8 pb-8">S.Y</th>
+                  <th class="pt-8 pb-8">Semester</th>
+                  <th class="pt-8 pb-8">Date</th>
+                  <th class="pt-8 pb-8">Status</th>
                 </tr>
               </thead>
 
@@ -411,27 +420,44 @@
               >
                 <tr class="space-y-5 even:bg-white odd:bg-gray-100">
                   <td class="pb-4 pt-2">1</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
+                  <td class="pb-4 pt-2">GEC 103</td>
+                  <td class="pb-4 pt-2">Mathematics</td>
+                  <td class="pb-4 pt-2">BSCS 4A</td>
+                  <td class="pb-4 pt-2">2022 - 2023</td>
+                  <td class="pb-4 pt-2">1st</td>
+                  <td class="pb-4 pt-2">1/1/2023</td>
+                  <td class="pb-4 pt-2">Posted</td>
+                  <td class="pb-4 pt-2">
+                    <a class="text-blu" href="view-grades.html">view</a>
+                  </td>
                 </tr>
+
                 <tr class="space-y-5 even:bg-white odd:bg-gray-100">
                   <td class="pb-4 pt-2">1</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
+                  <td class="pb-4 pt-2">GEC 103</td>
+                  <td class="pb-4 pt-2">Mathematics</td>
+                  <td class="pb-4 pt-2">BSCS 4A</td>
+                  <td class="pb-4 pt-2">2022 - 2023</td>
+                  <td class="pb-4 pt-2">1st</td>
+                  <td class="pb-4 pt-2">1/1/2023</td>
+                  <td class="pb-4 pt-2">Posted</td>
+                  <td class="pb-4 pt-2">
+                    <a class="text-blu" href="view-grades.html">view</a>
+                  </td>
                 </tr>
+
                 <tr class="space-y-5 even:bg-white odd:bg-gray-100">
                   <td class="pb-4 pt-2">1</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
+                  <td class="pb-4 pt-2">GEC 103</td>
+                  <td class="pb-4 pt-2">Mathematics</td>
+                  <td class="pb-4 pt-2">BSCS 4A</td>
+                  <td class="pb-4 pt-2">2022 - 2023</td>
+                  <td class="pb-4 pt-2">1st</td>
+                  <td class="pb-4 pt-2">1/1/2023</td>
+                  <td class="pb-4 pt-2">Posted</td>
+                  <td class="pb-4 pt-2">
+                    <a class="text-blu" href="view-grades.html">view</a>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -440,17 +466,17 @@
       </div>
     </section>
   </body>
-</html>
 
-<script>
-  $(document).ready(function () {
-    // Listen for keyup event on search input
-    $("#searchInput").on("keyup", function () {
-      var value = $(this).val().toLowerCase(); // Get the search value and convert to lowercase
-      $("tbody tr").filter(function () {
-        // Loop through each table row
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1); // Show/hide row based on search value
+  <script>
+    $(document).ready(function () {
+      // Listen for keyup event on search input
+      $("#searchInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase(); // Get the search value and convert to lowercase
+        $("tbody tr").filter(function () {
+          // Loop through each table row
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1); // Show/hide row based on search value
+        });
       });
     });
-  });
-</script>
+  </script>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student List</title>
+    <title>Submitted Grades</title>
     <link rel="icon" type="image/x-icon" href="/asset/chcc-vector-logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,6 @@
       rel="stylesheet"
     />
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -133,8 +132,7 @@
           <h1
             class="text-[20px] text-center text-blu font-medium mt-2 max-lg:text-[18px]"
           >
-            Concepcion Holy Cross
-            <br />
+            Concepcion Holy Cross <br />
             College Inc.
           </h1>
         </div>
@@ -231,12 +229,12 @@
           </li>
         </ul>
 
-        <!-- <button class="bg-blu text-white text-[18px] font-medium w-[167px] h-[50px] rounded-lg cursor-pointer absolute bottom-0 hover:bg-red-400">Log out</button> -->
+        <!-- <button class="bg-blu text-white text-[18px] font-medium w-[167px] h-[50px] rounded-lg cursor-pointer absolute bottom-20 hover:bg-red-400">Log out</button> -->
       </div>
 
       <!-- right-column -->
       <div
-        class="w-screen h-screen overflow-y-scroll mx-5 pb-10 max-xl:h-screen max-lg:h-screen"
+        class="w-screen h-screen overflow-y-scroll scrollbar-y-hidden mx-10 pb-10 max-xl:h-screen max-lg:h-screen"
       >
         <!-- header -->
         <header
@@ -344,11 +342,11 @@
             </div>
           </div>
 
-          <a
+          <h1
             class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
-            href="dean-index.html"
-            >Dashboard</a
           >
+            Grades
+          </h1>
 
           <div class="flex items-center gap-5">
             <img
@@ -379,8 +377,10 @@
             <h1
               class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
             >
-              Student List
+              Submitted Grades
             </h1>
+
+            <p class="mb-5 text-gray-500">1st Sem S.Y 2022 - 2023</p>
 
             <input
               class="py-3 w-[100%] border-2 border-blu text-sm md:text-base lg:text-lg font-medium rounded-lg text-left px-10"
@@ -398,40 +398,27 @@
               >
                 <tr>
                   <th class="pt-8 pb-8">No.</th>
-                  <th class="pt-8 pb-8">Last name</th>
-                  <th class="pt-8 pb-8">First name</th>
+                  <th class="pt-8 pb-8">Last Name</th>
+                  <th class="pt-8 pb-8">First Name</th>
                   <th class="pt-8 pb-8">M.I</th>
                   <th class="pt-8 pb-8">Department</th>
-                  <th class="pt-8 pb-8">Year & Section</th>
                 </tr>
               </thead>
 
               <tbody
                 class="space-y-6 text-center font-regular text-sm md:text-base lg:text-lg font-medium"
               >
-                <tr class="space-y-5 even:bg-white odd:bg-gray-100">
+                <tr class="space-y-5">
                   <td class="pb-4 pt-2">1</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                </tr>
-                <tr class="space-y-5 even:bg-white odd:bg-gray-100">
-                  <td class="pb-4 pt-2">1</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                </tr>
-                <tr class="space-y-5 even:bg-white odd:bg-gray-100">
-                  <td class="pb-4 pt-2">1</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
+                  <td class="pb-4 pt-2">Mejia</td>
+                  <td class="pb-4 pt-2">Joe Mariel</td>
+                  <td class="pb-4 pt-2">M</td>
+                  <td class="pb-4 pt-2">BSCS</td>
+                  <td class="pb-4 pt-2">
+                    <a class="text-blu" href="specific-submitted-grades.html"
+                      >view</a
+                    >
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -441,16 +428,3 @@
     </section>
   </body>
 </html>
-
-<script>
-  $(document).ready(function () {
-    // Listen for keyup event on search input
-    $("#searchInput").on("keyup", function () {
-      var value = $(this).val().toLowerCase(); // Get the search value and convert to lowercase
-      $("tbody tr").filter(function () {
-        // Loop through each table row
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1); // Show/hide row based on search value
-      });
-    });
-  });
-</script>

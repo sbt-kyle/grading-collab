@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student List</title>
+    <title>Grades</title>
     <link rel="icon" type="image/x-icon" href="/asset/chcc-vector-logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,6 @@
       rel="stylesheet"
     />
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -133,8 +132,7 @@
           <h1
             class="text-[20px] text-center text-blu font-medium mt-2 max-lg:text-[18px]"
           >
-            Concepcion Holy Cross
-            <br />
+            Concepcion Holy Cross <br />
             College Inc.
           </h1>
         </div>
@@ -236,7 +234,7 @@
 
       <!-- right-column -->
       <div
-        class="w-screen h-screen overflow-y-scroll mx-5 pb-10 max-xl:h-screen max-lg:h-screen"
+        class="w-screen h-screen overflow-y-scroll scrollbar-y-hidden mx-10 pb-10 max-xl:h-screen max-lg:h-screen"
       >
         <!-- header -->
         <header
@@ -344,11 +342,11 @@
             </div>
           </div>
 
-          <a
+          <h1
             class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
-            href="dean-index.html"
-            >Dashboard</a
           >
+            Grades
+          </h1>
 
           <div class="flex items-center gap-5">
             <img
@@ -365,7 +363,7 @@
 
               <span
                 class="text-blu text-[20px] font-medium max-lg:text-[16px] max-2xl:text-[18px] max-sm:text-[16px]"
-                >Status: Dean</span
+                >Status: Admin</span
               >
             </div>
           </div>
@@ -373,84 +371,70 @@
 
         <!-- right-content -->
         <main class="max-w-[1920px]">
-          <div
-            class="flex flex-col justify-between items-center w-[100%] my-5 gap-3 xl:items-start"
-          >
-            <h1
-              class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
+          <div class="flex flex-col items-center gap-10">
+            <div class="flex justify-center mt-20 text-sm w-[80%]">
+              <select
+                class="w-[100%] h-16 py-3 border-2 border-blue-800 rounded-lg px-3 cursor-pointer"
+                name="selectOption"
+                id="selectOption"
+              >
+                <option
+                  class="text-center py-2 text-base"
+                  value="--Select Semester--"
+                >
+                  --Select Semester--
+                </option>
+
+                <option class="bg-blue-800 text-white text-lg" value="1">
+                  1st Sem S.Y 2021 - 2022
+                </option>
+                <option class="bg-blue-800 text-white text-lg" value="2">
+                  2nd Sem S.Y 2021 - 2022
+                </option>
+                <option class="bg-blue-800 text-white text-lg" value="3">
+                  1st Sem S.Y 2022 - 2023
+                </option>
+                <option class="bg-blue-800 text-white text-lg" value="4">
+                  2nd Sem S.Y 2022 - 2023
+                </option>
+              </select>
+            </div>
+
+            <div
+              class="flex w-[100%] h-[100%] max-w-[1440px] gap-5 max-xl:flex-col"
+              id="linksContainer"
+              style="display: none"
             >
-              Student List
-            </h1>
-
-            <input
-              class="py-3 w-[100%] border-2 border-blu text-sm md:text-base lg:text-lg font-medium rounded-lg text-left px-10"
-              type="text"
-              id="searchInput"
-              class="border-2 border-gray-400 p-2 rounded-md"
-              placeholder="Search who you looking for.."
-            />
-          </div>
-
-          <div class="bg-white rounded-xl overflow-x-auto pb-5">
-            <table class="table-auto text-center w-[1920px] text-lg xl:w-full">
-              <thead
-                class="mt-10 font-bold text-sm md:text-base lg:text-lg font-medium"
+              <a
+                href="view-all-submitted-grades.html"
+                class="w-[100%] max-w-[705px] px-[53px] py-5 rounded-2xl bg-blu max-xl:max-w-none hover:opacity-70"
               >
-                <tr>
-                  <th class="pt-8 pb-8">No.</th>
-                  <th class="pt-8 pb-8">Last name</th>
-                  <th class="pt-8 pb-8">First name</th>
-                  <th class="pt-8 pb-8">M.I</th>
-                  <th class="pt-8 pb-8">Department</th>
-                  <th class="pt-8 pb-8">Year & Section</th>
-                </tr>
-              </thead>
-
-              <tbody
-                class="space-y-6 text-center font-regular text-sm md:text-base lg:text-lg font-medium"
-              >
-                <tr class="space-y-5 even:bg-white odd:bg-gray-100">
-                  <td class="pb-4 pt-2">1</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                </tr>
-                <tr class="space-y-5 even:bg-white odd:bg-gray-100">
-                  <td class="pb-4 pt-2">1</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                </tr>
-                <tr class="space-y-5 even:bg-white odd:bg-gray-100">
-                  <td class="pb-4 pt-2">1</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                  <td class="pb-4 pt-2">test</td>
-                </tr>
-              </tbody>
-            </table>
+                <h1 class="text-[40px] font-bold text-white">
+                  Submitted Grades
+                </h1>
+                <h2
+                  class="text-[64px] font-bold text-white text-right text-end mt-[11rem]"
+                >
+                  23
+                </h2>
+              </a>
+            </div>
           </div>
         </main>
       </div>
     </section>
+
+    <script>
+      const selectOption = document.getElementById("selectOption");
+      const linksContainer = document.getElementById("linksContainer");
+
+      selectOption.addEventListener("change", function () {
+        if (selectOption.value === "1") {
+          linksContainer.style.display = "flex";
+        } else {
+          linksContainer.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
-
-<script>
-  $(document).ready(function () {
-    // Listen for keyup event on search input
-    $("#searchInput").on("keyup", function () {
-      var value = $(this).val().toLowerCase(); // Get the search value and convert to lowercase
-      $("tbody tr").filter(function () {
-        // Loop through each table row
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1); // Show/hide row based on search value
-      });
-    });
-  });
-</script>

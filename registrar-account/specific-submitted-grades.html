@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registrar Dashboard</title>
+    <title>Professor Submitted Grades</title>
     <link rel="icon" type="image/x-icon" href="/asset/chcc-vector-logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -369,74 +369,55 @@
 
         <!-- right-content -->
         <main class="max-w-[1920px]">
-          <div class="flex flex-col items-center gap-10">
-            <div
-              class="w-[100%] max-w-[1440px] h-[360px] bg-white rounded-2xl items-center flex flex-col max-xl:h-[300px] max-lg:h-[260px]"
+          <div
+            class="flex flex-col justify-between items-center w-[100%] my-5 gap-3 xl:items-start"
+          >
+            <h1
+              class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
             >
-              <img
-                class="w-[192px] my-5 max-2xl:w-[180px] max-xl:w-[160px] max-lg:w-[145px] max-sm:w-[130px]"
-                src="/asset/chcc-vector-logo.png"
-                alt="chcc-logo"
-              />
+              Mejia, Joe Mariel M.
+            </h1>
 
-              <h1
-                class="text-[45px] font-medium text-blu max-2xl:text-[40px] max-2xl:mt-5 max-2xl:text-[24px] max-xl:text-[26px] max-lg:text-[24px] max-lg:mt-3 max-sm:text-[20px]"
+            <p class="mb-5 text-gray-500">1st Sem S.Y 2022 - 2023</p>
+
+            <input
+              class="py-3 w-[100%] border-2 border-blu text-sm md:text-base lg:text-lg font-medium rounded-lg text-left px-10"
+              type="text"
+              id="searchInput"
+              class="border-2 border-gray-400 p-2 rounded-md"
+              placeholder="Search who you looking for.."
+            />
+          </div>
+
+          <div class="bg-white rounded-xl overflow-x-auto pb-5">
+            <table class="table-auto text-center w-[1920px] text-lg xl:w-full">
+              <thead
+                class="mt-10 font-bold text-sm md:text-base lg:text-lg font-medium"
               >
-                Concepcion Holy Cross College Inc.
-              </h1>
-            </div>
+                <tr>
+                  <th class="pt-8 pb-8">No.</th>
+                  <th class="pt-8 pb-8">Code</th>
+                  <th class="pt-8 pb-8">Subject</th>
+                  <th class="pt-8 pb-8">Year&Section</th>
+                  <th class="pt-8 pb-8">Status</th>
+                </tr>
+              </thead>
 
-            <div
-              class="flex w-[100%] h-[100%] max-w-[1440px] gap-5 max-xl:flex-col"
-            >
-              <div
-                class="w-[100%] max-w-[705px] h-[100%] max-h-[400px] px-[53px] py-5 rounded-2xl bg-blu max-xl:max-w-none"
+              <tbody
+                class="space-y-6 text-center font-regular text-sm md:text-base lg:text-lg font-medium"
               >
-                <h1
-                  class="text-white font-bold text-[33px] max-2xl:text-[28px] max-sm:text-[24px]"
-                >
-                  Mission
-                </h1>
-
-                <p
-                  class="text-white text-[18px] font-medium py-3 text-justify max-2xl:text-[16px] max-sm:text-[14px]"
-                >
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages.
-                </p>
-              </div>
-
-              <div
-                class="w-[100%] max-w-[705px] px-[53px] py-5 rounded-2xl bg-lightblu max-xl:max-w-none"
-              >
-                <h1
-                  class="text-blu font-bold text-[33px] max-2xl:text-[28px] max-sm:text-[24px]"
-                >
-                  Vision
-                </h1>
-
-                <p
-                  class="text-blu text-[18px] font-medium py-3 text-justify max-2xl:text-[16px] max-sm:text-[14px]"
-                >
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages.
-                </p>
-              </div>
-            </div>
+                <tr class="space-y-5">
+                  <td class="pb-4 pt-2">1</td>
+                  <td class="pb-4 pt-2">GEC 103</td>
+                  <td class="pb-4 pt-2">Mathematics</td>
+                  <td class="pb-4 pt-2">BSCS 4A</td>
+                  <td class="pb-4 pt-2">Posted</td>
+                  <td class="pb-4 pt-2">
+                    <a class="text-blu" href="view-grades.html">view</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </main>
       </div>

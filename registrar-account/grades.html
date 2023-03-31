@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registrar Dashboard</title>
+    <title>Grades</title>
     <link rel="icon" type="image/x-icon" href="/asset/chcc-vector-logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -370,76 +370,69 @@
         <!-- right-content -->
         <main class="max-w-[1920px]">
           <div class="flex flex-col items-center gap-10">
-            <div
-              class="w-[100%] max-w-[1440px] h-[360px] bg-white rounded-2xl items-center flex flex-col max-xl:h-[300px] max-lg:h-[260px]"
-            >
-              <img
-                class="w-[192px] my-5 max-2xl:w-[180px] max-xl:w-[160px] max-lg:w-[145px] max-sm:w-[130px]"
-                src="/asset/chcc-vector-logo.png"
-                alt="chcc-logo"
-              />
-
-              <h1
-                class="text-[45px] font-medium text-blu max-2xl:text-[40px] max-2xl:mt-5 max-2xl:text-[24px] max-xl:text-[26px] max-lg:text-[24px] max-lg:mt-3 max-sm:text-[20px]"
+            <div class="flex justify-center mt-20 text-sm w-[80%]">
+              <select
+                class="w-[100%] h-16 py-3 border-2 border-blue-800 rounded-lg px-3 cursor-pointer"
+                name="selectOption"
+                id="selectOption"
               >
-                Concepcion Holy Cross College Inc.
-              </h1>
+                <option
+                  class="text-center py-2 text-base"
+                  value="--Select Semester--"
+                >
+                  --Select Semester--
+                </option>
+
+                <option class="bg-blue-800 text-white text-lg" value="1">
+                  1st Sem S.Y 2021 - 2022
+                </option>
+                <option class="bg-blue-800 text-white text-lg" value="2">
+                  2nd Sem S.Y 2021 - 2022
+                </option>
+                <option class="bg-blue-800 text-white text-lg" value="3">
+                  1st Sem S.Y 2022 - 2023
+                </option>
+                <option class="bg-blue-800 text-white text-lg" value="4">
+                  2nd Sem S.Y 2022 - 2023
+                </option>
+              </select>
             </div>
 
             <div
               class="flex w-[100%] h-[100%] max-w-[1440px] gap-5 max-xl:flex-col"
+              id="linksContainer"
+              style="display: none"
             >
-              <div
-                class="w-[100%] max-w-[705px] h-[100%] max-h-[400px] px-[53px] py-5 rounded-2xl bg-blu max-xl:max-w-none"
+              <a
+                href="submitted-grades.html"
+                class="w-[100%] max-w-[705px] px-[53px] py-5 rounded-2xl bg-blu max-xl:max-w-none hover:opacity-70"
               >
-                <h1
-                  class="text-white font-bold text-[33px] max-2xl:text-[28px] max-sm:text-[24px]"
-                >
-                  Mission
+                <h1 class="text-[40px] font-bold text-white">
+                  Submitted Grades
                 </h1>
-
-                <p
-                  class="text-white text-[18px] font-medium py-3 text-justify max-2xl:text-[16px] max-sm:text-[14px]"
+                <h2
+                  class="text-[64px] font-bold text-white text-right text-end mt-[11rem]"
                 >
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages.
-                </p>
-              </div>
-
-              <div
-                class="w-[100%] max-w-[705px] px-[53px] py-5 rounded-2xl bg-lightblu max-xl:max-w-none"
-              >
-                <h1
-                  class="text-blu font-bold text-[33px] max-2xl:text-[28px] max-sm:text-[24px]"
-                >
-                  Vision
-                </h1>
-
-                <p
-                  class="text-blu text-[18px] font-medium py-3 text-justify max-2xl:text-[16px] max-sm:text-[14px]"
-                >
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages.
-                </p>
-              </div>
+                  23
+                </h2>
+              </a>
             </div>
           </div>
         </main>
       </div>
     </section>
   </body>
+
+  <script>
+    const selectOption = document.getElementById("selectOption");
+    const linksContainer = document.getElementById("linksContainer");
+
+    selectOption.addEventListener("change", function () {
+      if (selectOption.value === "1") {
+        linksContainer.style.display = "flex";
+      } else {
+        linksContainer.style.display = "none";
+      }
+    });
+  </script>
 </html>

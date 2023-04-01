@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Faculty List</title>
+    <title>Grading System for CHCC</title>
     <link rel="icon" type="image/x-icon" href="/asset/chcc-vector-logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -102,10 +102,6 @@
 
       .burger-content a {
         text-decoration: none;
-      }
-
-      ::-webkit-scrollbar {
-        display: none;
       }
 
       @keyframes slide-down {
@@ -236,7 +232,7 @@
 
       <!-- right-column -->
       <div
-        class="w-screen h-screen overflow-y-scroll mx-5 pb-10 max-xl:h-screen max-lg:h-screen"
+        class="w-screen h-screen overflow-y-auto mx-5 pb-10 max-xl:h-screen max-lg:h-screen"
       >
         <!-- header -->
         <header
@@ -344,11 +340,11 @@
             </div>
           </div>
 
-          <a
+          <h1
             class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
-            href="dean-index.html"
-            >Dashboard</a
           >
+            Faculty List
+          </h1>
 
           <div class="flex items-center gap-5">
             <img
@@ -376,12 +372,6 @@
           <div
             class="flex flex-col justify-between items-center w-[100%] my-5 gap-3 md:items-start"
           >
-            <h1
-              class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
-            >
-              Faculty List
-            </h1>
-
             <input
               class="py-3 w-[100%] border-2 border-blu text-sm md:text-base lg:text-lg font-medium rounded-lg text-left px-10"
               type="text"
@@ -438,17 +428,17 @@
       </div>
     </section>
   </body>
-</html>
 
-<script>
-  $(document).ready(function () {
-    // Listen for keyup event on search input
-    $("#searchInput").on("keyup", function () {
-      var value = $(this).val().toLowerCase(); // Get the search value and convert to lowercase
-      $("tbody tr").filter(function () {
-        // Loop through each table row
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1); // Show/hide row based on search value
+  <script>
+    $(document).ready(function () {
+      // Listen for keyup event on search input
+      $("#searchInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase(); // Get the search value and convert to lowercase
+        $("tbody tr").filter(function () {
+          // Loop through each table row
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1); // Show/hide row based on search value
+        });
       });
     });
-  });
-</script>
+  </script>
+</html>

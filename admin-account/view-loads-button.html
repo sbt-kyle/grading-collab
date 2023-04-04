@@ -146,8 +146,8 @@
             />
             <a
               class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-              href="#"
-              >Schedule</a
+              href="loads.html"
+              >Loads</a
             >
           </li>
 
@@ -191,8 +191,8 @@
             />
             <a
               class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-              href="subject-and-section.html"
-              >Subject & Section</a
+              href="school-year.html"
+              >School Year</a
             >
           </li>
 
@@ -241,8 +241,6 @@
             >
           </li>
         </ul>
-
-        <!-- <button class="bg-blu text-white text-[18px] font-medium w-[167px] h-[50px] rounded-lg cursor-pointer absolute bottom-0 hover:bg-red-400">Log out</button> -->
       </div>
 
       <!-- right-column -->
@@ -272,8 +270,8 @@
                   />
                   <a
                     class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-                    href="#"
-                    >Schedule</a
+                    href="loads.html"
+                    >Loads</a
                   >
                 </li>
 
@@ -317,8 +315,8 @@
                   />
                   <a
                     class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-                    href="subject-and-section.html"
-                    >Subject & Section</a
+                    href="school-year.html"
+                    >School Year</a
                   >
                 </li>
 
@@ -332,7 +330,7 @@
                   />
                   <a
                     class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-                    href="grades.html"
+                    href="#"
                     >Grades</a
                   >
                 </li>
@@ -373,7 +371,7 @@
           <h1
             class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
           >
-            Subject & Section
+            Faculty List
           </h1>
 
           <div class="flex items-center gap-5">
@@ -398,24 +396,165 @@
         </header>
 
         <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
         <main class="max-w-[1920px]">
-          <div
-            class="flex flex-col justify-between items-center w-[100%] my-5 gap-3 xl:items-start"
-          >
-            <h1
-              class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
+          <div class="flex flex-col w-[100%] my-5 gap-3 md:items-start">
+            <button
+              id="create-account-btn"
+              class="bg-blu px-7 py-3 text-center text-white rounded hover:bg-opacity-70"
             >
-              List of Subjects
-            </h1>
+              Assign Loads
+            </button>
 
-            <div class="flex items-center justify-between w-full">
-              <p class="text-gray-500">1st Sem S.Y 2022 - 2023</p>
+            <!-- The popup -->
+            <div
+              id="create-account-popup"
+              class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden"
+            >
+              <div class="bg-white p-8 rounded w-[900px]">
+                <h1 class="text-2xl font-bold text-blu text-start mb-4">
+                  Assign Loads
+                </h1>
 
-              <button
-                class="bg-blu w-[140px] text-white h-[40px] rounded-lg hover:opacity-70"
-              >
-                Add new
-              </button>
+                <div class="flex flex-col justify-between gap-4 lg:flex-row">
+                  <div>
+                    <label class="text-sm text-gray-500">Select Subject</label>
+                    <select
+                      class="w-[100%] text-gray-500 py-3 border-2 border-blue-800 rounded-lg px-3 cursor-pointer"
+                      name="selectOption"
+                      id="selectOption"
+                    >
+                      <option class="text-center py-2 text-sm" value="Subject">
+                        What Subject?
+                      </option>
+
+                      <option class="bg-blue-800 text-white text-lg" value="1">
+                        MATH
+                      </option>
+                      <option class="bg-blue-800 text-white text-lg" value="2">
+                        ENGLISH
+                      </option>
+                      <option class="bg-blue-800 text-white text-lg" value="3">
+                        FILIPINO
+                      </option>
+                      <option class="bg-blue-800 text-white text-lg" value="4">
+                        SCIENCE
+                      </option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="text-sm text-gray-500">Select Year</label>
+                    <select
+                      class="w-[100%] text-gray-500 py-3 border-2 border-blue-800 rounded-lg px-3 cursor-pointer"
+                      name="selectOption"
+                      id="selectOption"
+                    >
+                      <option class="text-center py-2 text-sm" value="Year">
+                        What Year?
+                      </option>
+
+                      <option class="bg-blue-800 text-white text-lg" value="1">
+                        1st
+                      </option>
+                      <option class="bg-blue-800 text-white text-lg" value="2">
+                        2nd
+                      </option>
+                      <option class="bg-blue-800 text-white text-lg" value="3">
+                        3rd
+                      </option>
+                      <option class="bg-blue-800 text-white text-lg" value="4">
+                        4th
+                      </option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="text-sm text-gray-500">Select Section</label>
+                    <select
+                      class="w-[100%] text-gray-500 py-3 border-2 border-blue-800 rounded-lg px-3 cursor-pointer"
+                      name="selectOption"
+                      id="selectOption"
+                    >
+                      <option class="text-center py-2 text-sm" value="Section">
+                        Section
+                      </option>
+
+                      <option class="bg-blue-800 text-white text-lg" value="1">
+                        1A
+                      </option>
+                      <option class="bg-blue-800 text-white text-lg" value="2">
+                        2A
+                      </option>
+                      <option class="bg-blue-800 text-white text-lg" value="3">
+                        3A
+                      </option>
+                      <option class="bg-blue-800 text-white text-lg" value="4">
+                        4A
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="flex justify-end mt-4">
+                  <button
+                    id="cancel-btn"
+                    class="bg-gray-400 px-6 py-2 rounded text-white mr-4 hover:bg-opacity-70"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    id="create-btn"
+                    class="bg-blu px-6 py-2 rounded text-white hover:bg-opacity-70"
+                  >
+                    Assign
+                  </button>
+                </div>
+              </div>
             </div>
 
             <input
@@ -435,34 +574,71 @@
                 <tr>
                   <th class="pt-8 pb-8">No.</th>
                   <th class="pt-8 pb-8">Code</th>
-                  <th class="pt-8 pb-8">Description</th>
-                  <th class="pt-8 pb-8">Action</th>
+                  <th class="pt-8 pb-8">Subject</th>
+                  <th class="pt-8 pb-8">Year</th>
+                  <th class="pt-8 pb-8">Section</th>
                 </tr>
               </thead>
 
               <tbody
                 class="space-y-6 text-center font-regular text-sm md:text-base lg:text-lg font-medium"
               >
-                <tr class="space-y-5r">
-                  <td class="pb-4 pt-4">1</td>
-                  <td class="pb-4 pt-4">CSC101</td>
-                  <td class="pb-4 pt-4">Introduction to Computing</td>
-                  <td class="pb-4 pt-4">
-                    <a class="text-blu underline mr-2 hover:opacity-70" href="#"
-                      >edit</a
-                    >
-
-                    <a
-                      class="text-red-400 underline ml-2 hover:opacity-70"
-                      href="#"
-                      >delete</a
-                    >
-                  </td>
+                <tr class="space-y-5">
+                  <td class="pb-4 pt-2">1</td>
+                  <td class="pb-4 pt-2">GEC 103</td>
+                  <td class="pb-4 pt-2">Mathematics</td>
+                  <td class="pb-4 pt-2"></td>
+                  <td class="pb-4 pt-2"></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </main>
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
       </div>
     </section>
   </body>
@@ -477,6 +653,20 @@
           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1); // Show/hide row based on search value
         });
       });
+    });
+
+    const createAccountBtn = document.getElementById("create-account-btn");
+    const createAccountPopup = document.getElementById("create-account-popup");
+
+    // Show the popup when the button is clicked
+    createAccountBtn.addEventListener("click", () => {
+      createAccountPopup.classList.remove("hidden");
+    });
+
+    // Hide the popup when the cancel button is clicked
+    const cancelBtn = document.getElementById("cancel-btn");
+    cancelBtn.addEventListener("click", () => {
+      createAccountPopup.classList.add("hidden");
     });
   </script>
 </html>

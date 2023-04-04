@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -27,7 +28,6 @@
               lightblu: "#D3DDFF",
               lightgreeny: "#1EF868",
               thebg: "#F3F6FF",
-              tablehead: "#D2DCFF",
             },
           },
         },
@@ -92,7 +92,7 @@
         left: 0;
         width: auto;
         margin-top: 50px;
-        height: 280px;
+        height: 380px;
       }
 
       .burger-menu input[type="checkbox"]:checked + label + .burger-content {
@@ -104,13 +104,8 @@
         text-decoration: none;
       }
 
-      input[type="file"]:not(:focus) + label {
-        display: inline-block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        max-width: calc(100% - 1.5em);
-        padding-right: 1.5em;
+      ::-webkit-scrollbar {
+        display: none;
       }
 
       @keyframes slide-down {
@@ -132,18 +127,34 @@
         class="bg-darkblue flex flex-col items-center relative w-[400px] bg-white h-auto max-md:hidden"
       >
         <div class="flex-col flex items-center my-[30px]">
-          <a href="prof-index.html"
+          <a href="dean-index.html"
             ><img class="w-[89px]" src="/asset/chcc-vector-logo.png" alt="logo"
           /></a>
           <h1
             class="text-[20px] text-center text-blu font-medium mt-2 max-lg:text-[18px]"
           >
-            Concepcion Holy Cross <br />
+            Concepcion Holy Cross
+            <br />
             College Inc.
           </h1>
         </div>
 
         <ul class="flex flex-col items-center my-12">
+          <li
+            class="w-[224px] flex gap-3 border-b-2 gap-5 items-center pb-4 hover:border-blu cursor-pointer hover:text-blu hover:font-medium max-xl:pl-6"
+          >
+            <img
+              class="w-[25px] h-[25px] max-md:w-5 max-md:h-5"
+              src="/asset/icon-list.png"
+              alt=""
+            />
+            <a
+              class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
+              href="student-list.html"
+              >Student List</a
+            >
+          </li>
+
           <li
             class="w-[224px] flex gap-3 border-b-2 gap-5 items-center pb-4 hover:border-blu cursor-pointer hover:text-blu hover:font-medium max-xl:pl-6 mt-5"
           >
@@ -154,8 +165,8 @@
             />
             <a
               class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-              href="#"
-              >Loads</a
+              href="faculty-list.html"
+              >Faculty List</a
             >
           </li>
 
@@ -169,8 +180,23 @@
             />
             <a
               class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-              href="prof-grades.html"
+              href="dean-grades-button.html"
               >Grades</a
+            >
+          </li>
+
+          <li
+            class="w-[224px] flex gap-3 border-b-2 gap-5 items-center pb-4 hover:border-blu cursor-pointer hover:text-blu hover:font-medium max-xl:pl-6 mt-5"
+          >
+            <img
+              class="w-[25px] h-[25px] max-md:w-5 max-md:h-5"
+              src="/asset/icon-list.png"
+              alt=""
+            />
+            <a
+              class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
+              href="loads.html"
+              >Loads</a
             >
           </li>
 
@@ -204,13 +230,11 @@
             >
           </li>
         </ul>
-
-        <!-- <button class="bg-blu text-white text-[18px] font-medium w-[167px] h-[50px] rounded-lg cursor-pointer absolute bottom-20 hover:bg-red-400">Log out</button> -->
       </div>
 
       <!-- right-column -->
       <div
-        class="w-screen h-screen overflow-y-auto mx-10 pb-10 max-xl:h-screen max-lg:h-screen"
+        class="w-screen h-screen overflow-y-scroll mx-5 pb-10 max-xl:h-screen max-lg:h-screen"
       >
         <!-- header -->
         <header
@@ -226,6 +250,21 @@
             <div class="burger-content bg-white border border-blu">
               <ul class="flex flex-col items-center my-5 gap-2">
                 <li
+                  class="w-[224px] flex items-center gap-3 py-3 hover:border-blu cursor-pointer hover:font-medium hover:text-blu max-xl:pl-6 border-l-2 hover:border-l-14"
+                >
+                  <img
+                    class="w-[25px] h-[25px] max-md:w-5 max-md:h-5"
+                    src="/asset/icon-list.png"
+                    alt=""
+                  />
+                  <a
+                    class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
+                    href="student-list.html"
+                    >Student List</a
+                  >
+                </li>
+
+                <li
                   class="w-[224px] flex items-center gap-3 py-3 hover:border-blu cursor-pointer hover:font-medium hover:text-blu max-xl:pl-6 border-l-2 hover:border-l-14 mt-2"
                 >
                   <img
@@ -235,8 +274,8 @@
                   />
                   <a
                     class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-                    href="#"
-                    >Loads</a
+                    href="faculty-list.html"
+                    >Faculty List</a
                   >
                 </li>
 
@@ -250,8 +289,23 @@
                   />
                   <a
                     class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-                    href="prof-grades.html"
+                    href="dean-grades-button.html"
                     >Grades</a
+                  >
+                </li>
+
+                <li
+                  class="w-[224px] flex items-center gap-3 py-3 hover:border-blu cursor-pointer hover:font-medium hover:text-blu max-xl:pl-6 border-l-2 hover:border-l-14 mt-2"
+                >
+                  <img
+                    class="w-[25px] h-[25px] max-md:w-5 max-md:h-5"
+                    src="/asset/icon-list.png"
+                    alt=""
+                  />
+                  <a
+                    class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
+                    href="loads.html"
+                    >Loads</a
                   >
                 </li>
 
@@ -290,8 +344,9 @@
 
           <h1
             class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
+            href="dean-index.html"
           >
-            Grades
+            Loads
           </h1>
 
           <div class="flex items-center gap-5">
@@ -309,179 +364,148 @@
 
               <span
                 class="text-blu text-[20px] font-medium max-lg:text-[16px] max-2xl:text-[18px] max-sm:text-[16px]"
-                >Status: Professor</span
+                >Status: Dean</span
               >
             </div>
           </div>
         </header>
 
         <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
         <main class="max-w-[1920px]">
-          <div
-            class="flex flex-col justify-between items-center w-[100%] my-5 gap-3 xl:items-start"
+          <h1
+            class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
+            href="dean-index.html"
           >
-            <h1
-              class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
-            >
-              CSE-101 Elective 1 (BSCS 2A)
-            </h1>
+            Faculty List
+          </h1>
+          <div
+            class="flex flex-col justify-between items-center w-[100%] my-5 gap-3 md:items-start"
+          ></div>
 
-            <div class="flex items-center justify-between w-full">
-              <p class="text-gray-500">1st Sem S.Y 2022 - 2023</p>
-
-              <div class="flex gap-5">
-                <label
-                  for="file-input"
-                  class="bg-blu hover:bg-blue-700 text-white py-2 px-4 rounded cursor-pointer"
-                >
-                  Upload List
-                </label>
-                <input type="file" id="file-input" class="hidden" />
-
-                <button
-                  id="generate-report-btn"
-                  class="bg-blu px-5 text-white h-[40px] rounded-lg hover:opacity-70"
-                >
-                  Submit
-                </button>
-              </div>
-              <div
-                id="report-popup"
-                class="fixed inset-0 z-50 flex items-center justify-center bg-gray-500 bg-opacity-75 hidden"
-              >
-                <div
-                  class="bg-white rounded-lg p-8 w-[500px] h-[300px] relative"
-                >
-                  <h1
-                    class="font-bold text-blu pb-10"
-                    style="font-size: clamp(1rem, 0.625rem + 0.9375vw, 1.75rem)"
-                  >
-                    Are you sure do you want to submit this sheet?
-                  </h1>
-                  <div class="flex gap-3 justify-center">
-                    <a
-                      href="#"
-                      id="view-grades-btn"
-                      class="text-center cursor-pointer border border-blu hover:bg-blu hover:text-white text-blu font-bold py-3 px-7 rounded"
-                      >No</a
-                    >
-
-                    <a
-                      href="#"
-                      id="view-loads-btn"
-                      class="text-center cursor-pointer bg-blue-700 hover:bg-blue-500 text-white font-bold py-3 px-7 rounded"
-                      >Yes</a
-                    >
-                  </div>
-
-                  <button
-                    id="close-btn"
-                    class="text-center mt-5 cursor-pointer bg-gray-400 hover:bg-gray-300 text-white font-bold py-3 px-7 rounded"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <input
-              class="py-3 w-[100%] border-2 border-blu text-sm md:text-base lg:text-lg font-medium rounded-lg text-left px-10"
-              type="text"
-              id="searchInput"
-              class="border-2 border-gray-400 p-2 rounded-md"
-              placeholder="Search who you looking for.."
-            />
-
-            <div class="flex items-center gap-3 w-full justify-end">
-              <span
-                class="w-5 h-5 bg-red-400 rounded-full max-lg:w-4 max-lg:h-4 max-sm:w-4 max-sm:h-4"
-              ></span>
-              <span
-                class="text-blu text-[20px] font-medium max-lg:text-[16px] max-2xl:text-[18px] max-sm:text-[16px]"
-                >Unposted</span
-              >
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl overflow-x-auto pb-5">
-            <table class="table-auto text-center w-[1920px] text-lg xl:w-full">
+          <div class="bg-white rounded-xl pb-5">
+            <table class="table-auto text-center text-lg w-full">
               <thead
-                class="mt-10 font-bold text-sm md:text-base lg:text-lg font-medium bg-tablehead"
+                class="mt-10 font-bold text-sm md:text-base lg:text-lg font-medium"
               >
                 <tr>
                   <th class="pt-8 pb-8">No.</th>
-                  <th class="pt-8 pb-8">Last name</th>
-                  <th class="pt-8 pb-8">First name</th>
+                  <th class="pt-8 pb-8">Last Name</th>
+                  <th class="pt-8 pb-8">First Name</th>
                   <th class="pt-8 pb-8">M.I</th>
-                  <th class="pt-8 pb-8">Year & Section</th>
-                  <th class="pt-8 pb-8">Prelim</th>
-                  <th class="pt-8 pb-8">Midterm</th>
-                  <th class="pt-8 pb-8">Final</th>
-                  <th class="pt-8 pb-8">Final Average</th>
-                  <th class="pt-8 pb-8">Equivalent</th>
-                  <th class="pt-8 pb-8"></th>
+                  <th class="pt-8 pb-8">Department</th>
+                  <th class="pt-8 pb-8">Action</th>
                 </tr>
               </thead>
-
               <tbody
-                class="text-center font-regular text-sm md:text-base lg:text-lg font-medium"
+                class="space-y-6 text-center font-regular text-sm md:text-base lg:text-lg font-medium"
               >
-                <tr class="even:bg-white odd:bg-gray-100">
-                  <td class="pb-4 pt-4">1</td>
-                  <td class="pb-4 pt-4">Magsilang</td>
-                  <td class="pb-4 pt-4">Dan</td>
-                  <td class="pb-4 pt-4">T</td>
-                  <td class="pb-4 pt-4">BSCS 4A</td>
-                  <td class="pb-4 pt-4"></td>
-                  <td class="pb-4 pt-4"></td>
-                  <td class="pb-4 pt-4"></td>
-                  <td class="pb-4 pt-4"></td>
-                  <td class="pb-4 pt-4"></td>
-                  <td class="pb-4 pt-4">
-                    <button class="text-blu edit-button">edit</button>
+                <tr class="space-y-5 even:bg-white odd:bg-gray-100">
+                  <td class="pb-4 pt-2">1</td>
+                  <td class="pb-4 pt-2">test</td>
+                  <td class="pb-4 pt-2">test</td>
+                  <td class="pb-4 pt-2">test</td>
+                  <td class="pb-4 pt-2">test</td>
+                  <td class="pb-4 pt-2">
+                    <a href="view-loads.html" class="text-blu underline"
+                      >View Loads</a
+                    >
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
         </main>
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
       </div>
     </section>
   </body>
-
-  <script>
-    const generateReportBtn = document.getElementById("generate-report-btn");
-    const reportPopup = document.getElementById("report-popup");
-    const viewGradesBtn = document.getElementById("view-grades-btn");
-    const viewLoadsBtn = document.getElementById("view-loads-btn");
-    const closeBtn = document.getElementById("close-btn");
-
-    generateReportBtn.addEventListener("click", () => {
-      reportPopup.classList.remove("hidden");
-    });
-
-    closeBtn.addEventListener("click", () => {
-      reportPopup.classList.add("hidden");
-    });
-
-    const editButtons = document.querySelectorAll(".edit-button");
-
-    editButtons.forEach(function (editButton) {
-      editButton.addEventListener("click", function () {
-        const buttonText = editButton.textContent;
-        if (buttonText === "edit") {
-          editButton.textContent = "save";
-          editButton.style.color = "green";
-        } else {
-          editButton.textContent = "edit";
-          editButton.style.color = "blue";
-        }
-      });
-    });
-
-    const closeButton = document.getElementById("close-btn");
-    closeButton.addEventListener("click", () => {
-      // Add code here to close the modal or perform any other desired action
-    });
-  </script>
 </html>

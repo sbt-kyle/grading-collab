@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Professor Information</title>
+    <title>Grading System for CHCC</title>
     <link rel="icon" type="image/x-icon" href="/asset/chcc-vector-logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -91,7 +92,7 @@
         left: 0;
         width: auto;
         margin-top: 50px;
-        height: 380px;
+        height: 450px;
       }
 
       .burger-menu input[type="checkbox"]:checked + label + .burger-content {
@@ -101,10 +102,6 @@
 
       .burger-content a {
         text-decoration: none;
-      }
-
-      ::-webkit-scrollbar {
-        display: none;
       }
 
       @keyframes slide-down {
@@ -126,13 +123,14 @@
         class="bg-darkblue flex flex-col items-center relative w-[400px] bg-white h-auto max-md:hidden"
       >
         <div class="flex-col flex items-center my-[30px]">
-          <a href="dean-index.html"
+          <a href="admin.html"
             ><img class="w-[89px]" src="/asset/chcc-vector-logo.png" alt="logo"
           /></a>
           <h1
             class="text-[20px] text-center text-blu font-medium mt-2 max-lg:text-[18px]"
           >
-            Concepcion Holy Cross <br />
+            Concepcion Holy Cross
+            <br />
             College Inc.
           </h1>
         </div>
@@ -148,8 +146,8 @@
             />
             <a
               class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-              href="student-list.html"
-              >Student List</a
+              href="loads.html"
+              >Loads</a
             >
           </li>
 
@@ -173,13 +171,13 @@
           >
             <img
               class="w-[25px] h-[25px] max-md:w-5 max-md:h-5"
-              src="/asset/icon-grades.png"
+              src="/asset/icon-list.png"
               alt=""
             />
             <a
               class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-              href="dean-grades-button.html"
-              >Grades</a
+              href="student-list.html"
+              >Student List</a
             >
           </li>
 
@@ -193,8 +191,23 @@
             />
             <a
               class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-              href="#"
-              >Loads</a
+              href="school-year.html"
+              >School Year</a
+            >
+          </li>
+
+          <li
+            class="w-[224px] flex gap-3 border-b-2 gap-5 items-center pb-4 hover:border-blu cursor-pointer hover:text-blu hover:font-medium max-xl:pl-6 mt-5"
+          >
+            <img
+              class="w-[25px] h-[25px] max-md:w-5 max-md:h-5"
+              src="/asset/icon-grades.png"
+              alt=""
+            />
+            <a
+              class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
+              href="grades.html"
+              >Grades</a
             >
           </li>
 
@@ -228,13 +241,11 @@
             >
           </li>
         </ul>
-
-        <!-- <button class="bg-blu text-white text-[18px] font-medium w-[167px] h-[50px] rounded-lg cursor-pointer absolute bottom-20 hover:bg-red-400">Log out</button> -->
       </div>
 
       <!-- right-column -->
       <div
-        class="w-screen h-screen overflow-y-scroll scrollbar-y-hidden mx-10 pb-10 max-xl:h-screen max-lg:h-screen"
+        class="w-screen h-screen overflow-y-auto mx-5 pb-10 max-xl:h-screen max-lg:h-screen"
       >
         <!-- header -->
         <header
@@ -259,8 +270,8 @@
                   />
                   <a
                     class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-                    href="student-list.html"
-                    >Student List</a
+                    href="loads.html"
+                    >Loads</a
                   >
                 </li>
 
@@ -284,13 +295,13 @@
                 >
                   <img
                     class="w-[25px] h-[25px] max-md:w-5 max-md:h-5"
-                    src="/asset/icon-grades.png"
+                    src="/asset/icon-list.png"
                     alt=""
                   />
                   <a
                     class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
-                    href="dean-grades-button.html"
-                    >Grades</a
+                    href="student-list.html"
+                    >Student List</a
                   >
                 </li>
 
@@ -304,8 +315,23 @@
                   />
                   <a
                     class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
+                    href="school-year.html"
+                    >School Year</a
+                  >
+                </li>
+
+                <li
+                  class="w-[224px] flex items-center gap-3 py-3 hover:border-blu cursor-pointer hover:font-medium hover:text-blu max-xl:pl-6 border-l-2 hover:border-l-14 mt-2"
+                >
+                  <img
+                    class="w-[25px] h-[25px] max-md:w-5 max-md:h-5"
+                    src="/asset/icon-grades.png"
+                    alt=""
+                  />
+                  <a
+                    class="text-[18px] max-xl:text-[16px] max-md:text-[14px]"
                     href="#"
-                    >Loads</a
+                    >Grades</a
                   >
                 </li>
 
@@ -342,11 +368,11 @@
             </div>
           </div>
 
-          <a
+          <h1
             class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
-            href="dean-index.html"
-            >Dashboard</a
           >
+            Grades
+          </h1>
 
           <div class="flex items-center gap-5">
             <img
@@ -363,174 +389,186 @@
 
               <span
                 class="text-blu text-[20px] font-medium max-lg:text-[16px] max-2xl:text-[18px] max-sm:text-[16px]"
-                >Status: Dean</span
+                >Status: Admin</span
               >
             </div>
           </div>
         </header>
 
         <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
         <main class="max-w-[1920px]">
-          <div class="flex bg-white h-auto rounded-xl">
-            <div class="w-full m-14 flex flex-col gap-9">
-              <div class="leading-7">
-                <h1
-                  class="font-bold"
-                  style="font-size: clamp(1.25rem, 0.625rem + 1.5625vw, 2.5rem)"
-                >
-                  Professor 1
-                </h1>
-                <p class="text-grayish">professor1@example.com</p>
-              </div>
+          <div
+            class="flex flex-col justify-between items-center w-[100%] my-5 gap-3 xl:items-start"
+          >
+            <h1
+              class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
+            >
+              Change of Grades Request
+            </h1>
 
-              <div class="flex flex-col gap-y-5 justify-between lg:flex-row">
-                <div
-                  class="flex flex-col gap-y-5"
-                  style="
-                    font-size: clamp(0.75rem, 0.6875rem + 0.1563vw, 0.875rem);
-                  "
-                >
-                  <h3>
-                    Department :<span
-                      class="font-bold px-3"
-                      style="
-                        font-size: clamp(
-                          0.875rem,
-                          0.75rem + 0.3125vw,
-                          1.125rem
-                        );
-                      "
-                      >Computer Science</span
+            <h1
+              class="text-[28px] font-bold text-blu max-lg:text-[20px] max-2xl:text-[23px] max-sm:text-[20px]"
+            >
+              Mejia, Joe Mariel M.
+            </h1>
+
+            <p class="mb-5 text-gray-500">1st Sem S.Y 2022 - 2023</p>
+
+            <input
+              class="py-3 w-[100%] border-2 border-blu text-sm md:text-base lg:text-lg font-medium rounded-lg text-left px-10"
+              type="text"
+              id="searchInput"
+              class="border-2 border-gray-400 p-2 rounded-md"
+              placeholder="Search who you looking for.."
+            />
+          </div>
+
+          <div class="bg-white rounded-xl overflow-x-auto pb-5">
+            <table class="table-auto text-center w-[1920px] text-lg xl:w-full">
+              <thead
+                class="mt-10 font-bold text-sm md:text-base lg:text-lg font-medium"
+              >
+                <tr>
+                  <th class="pt-8 pb-8">No.</th>
+                  <th class="pt-8 pb-8">Code</th>
+                  <th class="pt-8 pb-8">Subject</th>
+                  <th class="pt-8 pb-8">Year & Section</th>
+                  <th class="pt-8 pb-8">Remarks</th>
+                  <th class="pt-8 pb-8">Action</th>
+                </tr>
+              </thead>
+
+              <tbody
+                class="space-y-6 text-center font-regular text-sm md:text-base lg:text-lg font-medium"
+              >
+                <tr class="space-y-5">
+                  <td class="pb-4 pt-2">1</td>
+                  <td class="pb-4 pt-2">GEC 103</td>
+                  <td class="pb-4 pt-2">Mathematics</td>
+                  <td class="pb-4 pt-2">BSCS 4A</td>
+                  <td class="pb-4 pt-2"></td>
+                  <td class="pb-4 pt-2">
+                    <a
+                      class="text-white bg-blu font-semibold px-5 py-2 hover:text-blu hover:bg-white hover:border hover:border-blu"
+                      href="#"
+                      >Approve</a
                     >
-                  </h3>
-                  <h3>
-                    Address :<span
-                      class="font-bold px-3"
-                      style="
-                        font-size: clamp(
-                          0.875rem,
-                          0.75rem + 0.3125vw,
-                          1.125rem
-                        );
-                      "
-                      >Computer Science</span
+
+                    <a
+                      class="text-red-400 border border-red-400 font-semibold px-5 py-2 hover:bg-red-400 hover:text-white"
+                      href="#"
+                      >Denied</a
                     >
-                  </h3>
-                  <h3>
-                    Date of Birth :
-                    <span
-                      class="font-bold px-3"
-                      style="
-                        font-size: clamp(
-                          0.875rem,
-                          0.75rem + 0.3125vw,
-                          1.125rem
-                        );
-                      "
-                      >Computer Science</span
-                    >
-                  </h3>
-                </div>
-
-                <div
-                  class="flex flex-col gap-y-5"
-                  style="
-                    font-size: clamp(0.75rem, 0.6875rem + 0.1563vw, 0.875rem);
-                  "
-                >
-                  <h3>
-                    Sex :
-                    <span
-                      class="font-bold px-3"
-                      style="
-                        font-size: clamp(
-                          0.875rem,
-                          0.75rem + 0.3125vw,
-                          1.125rem
-                        );
-                      "
-                      >Computer Science</span
-                    >
-                  </h3>
-                  <h3>
-                    Age :
-                    <span
-                      class="font-bold px-3"
-                      style="
-                        font-size: clamp(
-                          0.875rem,
-                          0.75rem + 0.3125vw,
-                          1.125rem
-                        );
-                      "
-                      >Computer Science</span
-                    >
-                  </h3>
-                </div>
-              </div>
-
-              <div class="flex flex-col gap-y-8">
-                <h1
-                  class="font-bold"
-                  style="font-size: clamp(1.25rem, 0.625rem + 1.5625vw, 2.5rem)"
-                >
-                  Schedule
-                </h1>
-
-                <div
-                  class="border border-blu rounded-lg w-[100%] h-[300px]"
-                ></div>
-
-                <!-- Button to trigger the pop-up -->
-                <button id="generate-report-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  Generate Report
-                </button>
-                
-                <!-- Pop-up window -->
-                <div id="report-popup" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-500 bg-opacity-75 hidden">
-                  <div class="bg-white rounded-lg p-8  w-[500px] h-[350px] relative">
-                    <h1
-                  class="font-bold text-blu pb-10"
-                  style="font-size: clamp(1.25rem, 0.625rem + 1.5625vw, 2.5rem)"
-                >
-                  Generate Report
-                </h1>
-                    <div class="flex flex-col gap-3 justify-between">
-
-                     <a href="generate-report-submitted-grades.html" id="view-grades-btn" class="text-center cursor-pointer bg-blue-700 hover:bg-blue-500 text-white font-bold py-5 px-4 rounded">View Submitted Grades</a>
-
-                      <a href="view-loads.html" id="view-loads-btn" class="text-center cursor-pointer bg-blue-700 hover:bg-blue-500 text-white font-bold py-5 px-4 rounded">View Loads</a>
-
-                    </div>
-                    <a id="close-btn" class="text-center cursor-pointer absolute bottom-5 mt-8 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
-                      Close
-                    </a>
-                  </div>
-                </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </main>
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
+        <!-- right-content -->
       </div>
     </section>
   </body>
 
   <script>
-    const generateReportBtn = document.getElementById('generate-report-btn');
-    const reportPopup = document.getElementById('report-popup');
-    const viewGradesBtn = document.getElementById('view-grades-btn');
-    const viewLoadsBtn = document.getElementById('view-loads-btn');
-    const closeBtn = document.getElementById('close-btn');
-  
-    generateReportBtn.addEventListener('click', () => {
-      reportPopup.classList.remove('hidden');
-    });
-  
-    closeBtn.addEventListener('click', () => {
-      reportPopup.classList.add('hidden');
+    $(document).ready(function () {
+      // Listen for keyup event on search input
+      $("#searchInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase(); // Get the search value and convert to lowercase
+        $("tbody tr").filter(function () {
+          // Loop through each table row
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1); // Show/hide row based on search value
+        });
+      });
     });
   </script>
 </html>

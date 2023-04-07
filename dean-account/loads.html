@@ -104,10 +104,6 @@
         text-decoration: none;
       }
 
-      ::-webkit-scrollbar {
-        display: none;
-      }
-
       @keyframes slide-down {
         from {
           transform: translateX(-100%);
@@ -427,8 +423,8 @@
             class="flex flex-col justify-between items-center w-[100%] my-5 gap-3 md:items-start"
           ></div>
 
-          <div class="bg-white rounded-xl pb-5">
-            <table class="table-auto text-center text-lg w-full">
+          <div class="bg-white rounded-xl pb-5 overflow-x-auto">
+            <table class="table-auto text-center w-[700px] text-lg md:w-full">
               <thead
                 class="mt-10 font-bold text-sm md:text-base lg:text-lg font-medium"
               >
@@ -444,16 +440,14 @@
               <tbody
                 class="space-y-6 text-center font-regular text-sm md:text-base lg:text-lg font-medium"
               >
-                <tr class="space-y-5 even:bg-white odd:bg-gray-100">
+                <tr class="space-y-5">
                   <td class="pb-4 pt-2">1</td>
                   <td class="pb-4 pt-2">test</td>
                   <td class="pb-4 pt-2">test</td>
                   <td class="pb-4 pt-2">test</td>
                   <td class="pb-4 pt-2">test</td>
                   <td class="pb-4 pt-2">
-                    <a href="view-loads.html" class="text-blu underline"
-                      >View Loads</a
-                    >
+                    <a href="view-loads.html" class="text-blu">View Loads</a>
                   </td>
                 </tr>
               </tbody>

@@ -443,14 +443,15 @@
         <!-- right-content -->
         <main class="max-w-[1920px]">
           <div class="flex flex-col w-[100%] my-5 gap-3 md:items-start">
-            <label
-              for="file-input"
-              class="bg-blu text-center hover:bg-blue-700 text-white py-2 px-4 rounded cursor-pointer"
-            >
-              Create Account
-            </label>
-            <input type="file" id="file-input" class="hidden" />
+            <form action="#">
+              <input class="text-lg lg:text-xl" type="file" id="file-input" />
 
+              <button
+                class="text-white bg-blu px-5 py-2 hover:bg-opacity-70 rounded"
+              >
+                Upload
+              </button>
+            </form>
             <input
               class="py-3 w-[100%] border-2 border-blu text-sm md:text-base lg:text-lg font-medium rounded-lg text-left px-10"
               type="text"
@@ -461,7 +462,7 @@
           </div>
 
           <div class="bg-white rounded-xl overflow-x-auto pb-5">
-            <table class="table-auto text-center w-[1920px] text-lg xl:w-full">
+            <table class="table-auto text-center w-[700px] text-lg md:w-full">
               <thead
                 class="mt-10 font-bold text-sm md:text-base lg:text-lg font-medium"
               >

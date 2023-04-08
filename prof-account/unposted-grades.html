@@ -374,7 +374,7 @@
 
               <button
                 id="generate-report-btn"
-                class="bg-blu px-5 text-white h-[40px] rounded-lg hover:opacity-70"
+                class="bg-blu px-5 text-white h-[40px] rounded hover:opacity-70"
               >
                 Submit
               </button>
@@ -383,33 +383,32 @@
                 id="report-popup"
                 class="fixed inset-0 z-50 flex items-center justify-center bg-gray-500 bg-opacity-75 hidden"
               >
-                <div
-                  class="bg-white rounded-lg p-8 w-[500px] h-[300px] relative"
+                <form action="#"
+                  class="bg-white rounded-lg p-8 w-[500px] h-[250px] relative"
                 >
                   <h1
                     class="font-bold text-blu pb-10"
-                    style="font-size: clamp(1rem, 0.625rem + 0.9375vw, 1.75rem)"
+                    style="font-size: clamp(1.25rem, 0.625rem + 0.9375vw, 1.75rem)"
                   >
                     Are you sure do you want to submit this sheet?
                   </h1>
-                  <div class="flex gap-7 justify-center">
-                    <form action="#">
-                      <button
+                  <div class="flex gap-7 items-center justify-center">
+
+                      <span
                         id="close-btn"
-                        class="text-center mt-5 mr-5 cursor-pointer bg-gray-400 hover:bg-gray-300 text-white font-bold py-3 px-7 rounded"
+                        class="text-center text-sm cursor-pointer bg-gray-400 hover:bg-gray-300 text-white font-bold py-3 px-7 rounded"
                       >
                         Close
-                      </button>
+                      </span>
 
                       <button
                         id="view-loads-btn"
-                        class="text-center cursor-pointer bg-blue-700 hover:bg-blue-500 text-white font-bold py-3 px-7 rounded"
+                        class="text-center text-sm cursor-pointer bg-blue-700 hover:bg-blue-500 text-white font-bold py-3 px-7 rounded"
                       >
                         Yes
-                      </button>
-                    </form>
+
                   </div>
-                </div>
+                </form>
               </div>
             </div>
 

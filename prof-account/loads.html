@@ -409,7 +409,7 @@
           <div class="bg-white round ed-xl overflow-x-auto pb-5">
             <table class="table-auto text-center w-[700px] text-lg md:w-full">
               <thead
-                class="mt-10 font-bold text-sm md:text-base lg:text-lg font-medium"
+                class="mt-10 font-bold text-sm md:text-base lg:text-lg font-medium bg-tablehead"
               >
                 <tr>
                   <th class="pt-8 pb-8">No.</th>
@@ -420,19 +420,46 @@
                   <th class="pt-8 pb-8">Action</th>
                 </tr>
               </thead>
-
               <tbody
-                class="space-y-6 text-center font-regular text-sm md:text-base lg:text-lg font-medium"
+                class="text-center font-regular text-sm md:text-base lg:text-lg font-medium"
               >
-                <tr class="space-y-5">
+                <tr class="bg-white">
                   <td class="pb-4 pt-2">1</td>
                   <td class="pb-4 pt-2">CSE101</td>
                   <td class="pb-4 pt-2">Elective 1</td>
                   <td class="pb-4 pt-2"></td>
                   <td class="pb-4 pt-2">2A</td>
                   <td
-                    id="generate-report-btn"
-                    class="pb-4 pt-2 text-blu underline cursor-pointer"
+                    class="text-blu underline cursor-pointer hover:opacity-70"
+                    id="generate-btn"
+                  >
+                    Generate
+                  </td>
+                </tr>
+
+                <tr class="bg-white">
+                  <td class="pb-4 pt-2">1</td>
+                  <td class="pb-4 pt-2">CSE101</td>
+                  <td class="pb-4 pt-2">Elective 1</td>
+                  <td class="pb-4 pt-2"></td>
+                  <td class="pb-4 pt-2">2A</td>
+                  <td
+                    class="text-blu underline cursor-pointer hover:opacity-70"
+                    id="generate-btn"
+                  >
+                    Generate
+                  </td>
+                </tr>
+
+                <tr class="bg-white">
+                  <td class="pb-4 pt-2">1</td>
+                  <td class="pb-4 pt-2">CSE101</td>
+                  <td class="pb-4 pt-2">Elective 1</td>
+                  <td class="pb-4 pt-2"></td>
+                  <td class="pb-4 pt-2">2A</td>
+                  <td
+                    class="text-blu underline cursor-pointer hover:opacity-70"
+                    id="generate-btn"
                   >
                     Generate
                   </td>
@@ -491,15 +518,21 @@
   </body>
 
   <script>
-    const generateReportBtn = document.getElementById("generate-report-btn");
+    // JavaScript
     const reportPopup = document.getElementById("report-popup");
     const reportForm = document.querySelector("#report-popup form");
-    generateReportBtn.addEventListener("click", () => {
-      reportPopup.classList.remove("hidden");
+
+    // Select all td elements with class "generate-btn"
+    const generateBtns = document.querySelectorAll("#generate-btn");
+
+    // Loop through all the td elements and add the event listener
+    generateBtns.forEach(function (generateBtn) {
+      generateBtn.addEventListener("click", () => {
+        reportPopup.classList.remove("hidden");
+      });
     });
 
     reportPopup.addEventListener("click", function (event) {
-      // Check if clicked element is outside the form and close the popup
       if (event.target === reportPopup) {
         reportPopup.classList.add("hidden");
       }

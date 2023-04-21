@@ -399,7 +399,7 @@
 
             <div
             id="update-popup"
-            class="fixed inset-0 z-50 flex items-center justify-center bg-gray-500 bg-opacity-75"
+            class="fixed inset-0 z-50 flex items-center justify-center bg-gray-500 bg-opacity-75 hidden"
           >
             <form action="#"
               class="bg-white rounded-lg p-8 w-full h-fit relative"
@@ -473,7 +473,7 @@
 
 
               <div
-                id="report-popup"
+                id="popUp"
                 class="fixed inset-0 z-50 flex items-center justify-center bg-gray-500 bg-opacity-75 hidden"
               >
                 <form action="#"
@@ -488,7 +488,7 @@
                   <div class="flex gap-7 items-center justify-center">
 
                       <span
-                        id="close-btn"
+                        id="closed-pop"
                         class="text-center text-sm cursor-pointer bg-gray-400 hover:bg-gray-300 text-white font-bold py-3 px-7 rounded"
                       >
                         Close
@@ -606,17 +606,15 @@
 
   <script>
     const generateReportBtn = document.getElementById("generate-report-btn");
-    const reportPopup = document.getElementById("report-popup");
-    const viewGradesBtn = document.getElementById("view-grades-btn");
-    const viewLoadsBtn = document.getElementById("view-loads-btn");
-    const closeBtn = document.getElementById("close-btn");
+    const popUp = document.getElementById("popUp");
+    const closePop = document.getElementById("closed-pop");
 
     generateReportBtn.addEventListener("click", () => {
-      reportPopup.classList.remove("hidden");
+      popUp.classList.remove("hidden");
     });
 
-    closeBtn.addEventListener("click", () => {
-      reportPopup.classList.add("hidden");
+    closePop.addEventListener("click", () => {
+      popUp.classList.add("hidden");
     });
 
     const updateBtn = document.getElementById("update-btn");
@@ -632,9 +630,6 @@
     });
 
 
-    const closeButton = document.getElementById("close-btn");
-    closeButton.addEventListener("click", () => {
-      // Add code here to close the modal or perform any other desired action
-    });
+
   </script>
 </html>

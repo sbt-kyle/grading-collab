@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Register</title>
     <link rel="icon" type="image/x-icon" href="/asset/chcc-vector-logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,24 +54,31 @@
             <img class="hidden xl:block" src="/asset/login-flash-vector.svg" alt="Flash-Vector">
         </div>
         <div class="sm:w-[352px] sm:text-left">
-            <h2 class="font-semibold text-[22px] text-center mt-[19px] sm:text-[25px] xl:text-[27px] xl:text-left">Login</h2>
-            <p class="text-[12px] font-medium text-center mt-[8px] text-grayish sm:text-[13px] xl:text-[14px] xl:font-thin xl:text-left">Please log in using your account and password.</p>
+            <h2 class="font-semibold text-[22px] text-center mt-[19px] sm:text-[25px] xl:text-[27px] xl:text-left">Register</h2>
+            <p class="text-[12px] font-medium text-center mt-[8px] text-grayish sm:text-[13px] xl:text-[14px] xl:font-thin xl:text-left">Please register by filling out the form below with your personal information.</p>
         </div>
             <form class="mt-5 flex flex-col w-full justify-center gap-[19px] px-[12px] sm:w-[352px] sm:px-0" action="#">
             <div class="flex flex-col">
                 <label class="text-blu text-[12px] sm:text-[13px] mb-1">Account*</label>
-                <input class="border border-gray-400 rounded h-[43px] px-[16px] text-[11px] sm:text-[12px] xl:h-[46px] xl:text-[13px]" type="text" placeholder="Registerd account">
+                <input class="border border-gray-400 rounded h-[43px] px-[16px] text-[11px] sm:text-[12px] xl:h-[46px] xl:text-[13px]" type="text" placeholder="Register account">
             </div>
 
             <div class="flex flex-col">
                 <label class="text-blu text-[12px] sm:text-[13px] mb-1">Password*</label>
                 <input class="border border-gray-400 rounded h-[43px] px-[16px] text-[11px] sm:text-[12px] xl:h-[46px] xl:text-[13px]" type="password" placeholder="Password">
             </div>
-                <button class="text-white bg-blu mt-[-5px] h-[42px] rounded hover:opacity-70 text-[12px] sm:text-[13px] xl:text-[14px]">Login</button>
+
+            <div class="flex flex-col">
+                <label class="text-blu text-[12px] sm:text-[13px] mb-1">Confirm password*</label>
+                <input class="border border-gray-400 rounded h-[43px] px-[16px] text-[11px] sm:text-[12px] xl:h-[46px] xl:text-[13px]" type="password" placeholder="Confirm password">
+            </div>
+
+
+                <button class="text-white bg-blu mt-[-5px] h-[42px] rounded hover:opacity-70 text-[12px] sm:text-[13px] xl:text-[14px]">Register</button>
 
 
             <div class="flex gap-2 text-[12px] justify-center sm:text-[13px] xl:w-[352px] xl:justify-start">
-                <h3 class="font-medium">Not registered yet?</h3> <a class="font-medium text-blu hover:opacity-70" href="register-page.html">Register</a>
+                <h3 class="font-medium">Have an account?</h3> <a class="font-medium text-blu hover:opacity-70" href="login-page.html">Login</a>
             </div>
 
             </form>
